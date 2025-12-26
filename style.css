@@ -15,32 +15,30 @@ body {
   scroll-behavior: smooth;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .container {
   max-width: 1200px;
   margin-inline: auto;
   padding: 0 20px;
 }
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 .logo {
   font-size: 28px;
   font-weight: 800;
   text-decoration: none;
 }
-
-.logo .sejuta {
-  color: #e63946;
-}
-.logo .rasa {
-  color: #fff;
-}
-.logo .batak {
-  color: #000;
-}
+.logo .sejuta { color: #e63946; }
+.logo .rasa { color: #fff; }
+.logo .batak { color: #000; }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("gambar.jpg");
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("gambar.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -58,21 +56,30 @@ header nav a {
   color: #fff;
   text-decoration: none;
 }
+
 header nav ul {
   display: flex;
   gap: 30px;
   list-style: none;
-  align-items: center; /* INI KUNCI */
+  align-items: center;
 }
+
 .nav-contact-btn {
   display: inline-flex;
   align-items: center;
   padding: 10px 22px;
-  margin-top: 4px; /* ⬇️ NURUNIN DIKIT */
+  margin-top: 4px;
+  background: #8a252a;
+  border-radius: 20px;
+  color: #fff !important;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.nav-contact-btn:hover {
+  background: #6e1c21;
 }
 
-
-
+/* ===== HERO ===== */
 header .Hero {
   height: 85vh;
   display: flex;
@@ -82,13 +89,11 @@ header .Hero {
   text-align: center;
   gap: 1.5rem;
 }
-
 header .Hero h1 {
   font-size: 48px;
   color: #fff;
   font-weight: 800;
 }
-
 header .Hero .cta {
   background: #e63946;
   padding: 15px 35px;
@@ -98,7 +103,7 @@ header .Hero .cta {
   font-weight: 700;
 }
 
-/*==================== ABOUT ====================*/
+/* ===== ABOUT ===== */
 .about {
   background: #f9f9f9;
   padding: 100px 0;
@@ -106,9 +111,9 @@ header .Hero .cta {
 
 .about__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 3rem;
+  align-items: center;
 }
 
 .about__data {
@@ -163,7 +168,7 @@ header .Hero .cta {
   transform: scale(1.05);
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 .button {
   background: #5e110a;
   color: #fff;
@@ -172,54 +177,15 @@ header .Hero .cta {
   border-radius: 6px;
   font-weight: 700;
 }
+
+/* ===== BUDAYA GRID ===== */
 .budaya-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
 }
 
-.budaya-card {
-  background: #fff;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 1.2rem;
-  transition: 0.3s;
-}
-
-.budaya-card:hover {
-  transform: translateY(-5px);
-}
-
-.budaya-card img {
-  width: 100%;
-  border-radius: 10px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.budaya-card h3 {
-  font-size: 1.3rem;
-  margin: 0.5rem 0;
-  color: #75180d;
-}
-
-.budaya-card:nth-child(2) h3 {
-  color: #75180d;
-}
-.budaya-card:nth-child(3) h3 {
-  color: #75180d;
-}
-.budaya-card:nth-child(4) h3 {
-  color: #75180d;
-}
-
-.budaya-card p {
-  line-height: 1.5;
-  font-size: 0.95rem;
-}
-
-/* CARD UMUM */
 .budaya-card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 18px;
@@ -233,7 +199,6 @@ header .Hero .cta {
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
 }
 
-/* GAMBAR */
 .budaya-card img {
   width: 100%;
   height: 240px;
@@ -241,7 +206,6 @@ header .Hero .cta {
   display: block;
 }
 
-/* JUDUL */
 .budaya-card h3 {
   font-family: "Cinzel", serif;
   font-size: 1.5rem;
@@ -249,7 +213,6 @@ header .Hero .cta {
   margin: 20px 20px 10px;
 }
 
-/* DESKRIPSI */
 .budaya-card p {
   font-family: "Poppins", sans-serif;
   font-size: 0.95rem;
@@ -259,19 +222,13 @@ header .Hero .cta {
   text-align: justify;
 }
 
-/* KHUSUS FALSAFAH */
+/* Falsafah Batak */
 .falsafah-batak p strong {
   color: #7a1f1f;
   font-weight: 600;
 }
 
-.budaya-video {
-  width: 100%;
-  height: 160px; /* kecil */
-  border-radius: 10px;
-  object-fit: cover;
-}
-
+/* ===== DISCOVER ===== */
 .discover {
   padding: 2rem 0;
 }
@@ -317,47 +274,6 @@ header .Hero .cta {
   color: #fff;
 }
 
-.discover__rating {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 0.3rem 0.6rem;
-  border-radius: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.discover__title {
-  font-size: 1.4rem;
-  margin: 0.3rem 0;
-}
-
-.discover__location {
-  display: block;
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.discover__price {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.discover__button {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: #004d4d;
-  color: #fff;
-  padding: 0.8rem 1rem;
-  border-radius: 0.8rem 0 1rem 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-
-
 /* ===== PARIWISATA VIDEO ===== */
 .pariwisata {
   position: relative;
@@ -367,7 +283,6 @@ header .Hero .cta {
   align-items: center;
 }
 
-/* VIDEO */
 .pariwisata__video {
   position: absolute;
   top: 0;
@@ -378,25 +293,19 @@ header .Hero .cta {
   z-index: -2;
 }
 
-/* OVERLAY */
 .pariwisata__overlay {
   position: absolute;
   inset: 0;
-  
   z-index: -1;
 }
 
-/* CONTENT */
 .pariwisata__content {
   text-align: center;
   color: #fff;
   max-width: 800px;
-
-  margin-top: 120px; /* ⬅️ geser ke bawah */
+  margin-top: 120px;
 }
 
-
-/* TITLE */
 .pariwisata__title {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
@@ -405,9 +314,6 @@ header .Hero .cta {
   color: #c95b5b;
 }
 
-
-
-/* DESC */
 .pariwisata__desc {
   font-family: "Playfair Display", serif;
   font-size: 1.15rem;
@@ -416,8 +322,6 @@ header .Hero .cta {
   color: #eee;
 }
 
-
-/* BUTTON */
 .pariwisata__btn {
   display: inline-block;
   padding: 14px 36px;
@@ -428,57 +332,27 @@ header .Hero .cta {
   border-radius: 30px;
   transition: 0.3s ease;
 }
-
 .pariwisata__btn:hover {
   background: #c08383;
   transform: translateY(-3px);
 }
 
-
-#scrollTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 45px;
-  height: 45px;
-  border: none;
-  background: #1b5e66;
-  color: white;
-  font-size: 22px;
-  border-radius: 6px;
-  cursor: pointer;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-/* ====== CONTACT HEADER ====== */
+/* ===== CONTACT ===== */
 .contact-hero {
   text-align: center;
   padding: 40px 20px;
   background: #f4f4f4;
   border-bottom: 1px solid #ddd;
 }
+.contact-hero h1 { font-size: 28px; margin-bottom: 8px; }
+.contact-hero p { font-size: 16px; color: #444; }
 
-.contact-hero h1 {
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-
-.contact-hero p {
-  font-size: 16px;
-  color: #444;
-}
-
-/* ====== CONTACT FORM WRAPPER ====== */
 .contact-container {
   display: flex;
   justify-content: center;
   margin-top: 30px;
   padding: 0 20px;
 }
-
 .contact-form {
   width: 100%;
   max-width: 480px;
@@ -496,18 +370,13 @@ header .Hero .cta {
   color: #333;
 }
 
-/* ====== INPUT GROUP ====== */
-.input-group {
-  margin-bottom: 16px;
-}
-
+.input-group { margin-bottom: 16px; }
 .input-group label {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 6px;
   display: block;
 }
-
 .input-group input,
 .input-group textarea {
   width: 100%;
@@ -517,13 +386,11 @@ header .Hero .cta {
   font-size: 15px;
   outline: none;
 }
-
 .input-group input:focus,
 .input-group textarea:focus {
   border-color: #8a252a;
 }
 
-/* ====== BUTTON ====== */
 .contact-btn {
   width: 100%;
   padding: 12px;
@@ -534,61 +401,37 @@ header .Hero .cta {
   font-size: 16px;
   cursor: pointer;
 }
+.contact-btn:hover { background: #6e1c21; }
 
-.contact-btn:hover {
-  background: #6e1c21;
-}
-
-/* Fade animation */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+@media screen and (max-width: 1024px) {
+  header .Hero h1 { font-size: 38px; }
+  .about__title { font-size: 32px; }
+}
+
+@media screen and (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
+  .about__container,
+  .budaya-grid,
+  .discover__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .budaya-card img { height: auto; }
+  .pariwisata__title { font-size: 2.2rem; }
+  .pariwisata__desc { font-size: 1rem; }
+  .contact-form { padding: 20px; }
 }
-
-.nav-contact-btn {
-  background: #8a252a;
-  padding: 10px 22px;
-  border-radius: 20px;
-  color: #fff !important;
-  font-weight: 700;
-  transition: 0.3s;
-}
-
-.nav-contact-btn:hover {
-  background: #6e1c21;
-}
-
-
-/* Card Marga */
-.budaya-marga {
-    position: relative;
-}
-
-.btn-marga {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 18px;
-    background-color: #8b1e1e; /* merah batak */
-    color: #fff;
-    font-size: 14px;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-}
-
-.btn-marga:hover {
-    background-color: #6f1616;
-}
-
-.gallery-link {
-  position: relative;
-  z-index: 99;
-  pointer-events: auto;
-}
-
