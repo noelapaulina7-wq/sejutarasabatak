@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeri Wisata Budaya Batak</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Nunito", sans-serif;
+      background: #f6f8fa;
+      color: #222;
+    }
+
+    /* ===== HEADER ===== */
+    .gallery-header {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .gallery-header h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .gallery-header p {
+      font-size: 1rem;
+      color: #555;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* ===== GALLERY GRID ===== */
+    .gallery-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.8rem;
+    }
+
+    /* ===== CARD ===== */
+    .gallery-card {
+      position: relative;
+      height: 380px;
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.1);
+      filter: brightness(70%);
+    }
+
+    /* ===== OVERLAY TEXT ===== */
+    .gallery-info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.1)
+      );
+      color: #fff;
+    }
+
+    .gallery-info h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .gallery-info span {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <section class="gallery-header">
+    <h1>Galeri Destinasi Budaya </h1>
+    <p>
+    Di sini kamu bisa menemukan berbagai destinasi wisata budaya yang cocok buat eksplor, belajar, dan menikmati suasana lokal..
+    </p>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="gallery-container">
+
+    <!-- 1 -->
+    <div class="gallery-card">
+        
+      <img src="danautoba.jpeg" alt="Rumah Bolon">
+      <div class="gallery-info">
+        <h3>Danau Toba</h3>
+        
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="gallery-card">
+      <img src="gereja.jpeg" alt="Tari Tortor">
+      <div class="gallery-info">
+        <h3>GEREJA BOLON HKBP PANGURURAN</h3>
+    
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="gallery-card">
+      <img src="holbung.jpeg" alt="Kain Ulos">
+      <div class="gallery-info">
+        <h3>Bukit Sidohoni</h3>
+        
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="gallery-card">
+      <img src="sibeabea.jpeg" alt="sibeabea">
+      <div class="gallery-info">
+        <h3>Patung Tuhan Yesus Sibea-bea</h3>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="gallery-card">
+      <img src="sijorni.jpeg" alt="Desa Tomok">
+      <div class="gallery-info">
+        <h3>Aek Sijorni</h3>
+      </div>  
+    </div>
+
+     <!-- 6 -->
+    <div class="gallery-card">
+      <img src="samosir.jpeg" alt="Pulau Samosir">
+      <div class="gallery-info">
+        <h3>Pulau Samosir</h3>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="gallery-card">
+      <img src="airsoda.jpeg" alt="Air Soda">
+      <div class="gallery-info">
+        <h3>Air Soda</h3>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="gallery-card">
+      <img src="salibkasih.jpeg" alt="Salib Kasih">
+      <div class="gallery-info">
+        <h3>Salib Kasih</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
